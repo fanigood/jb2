@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        tools:context=".MainActivity">
+
+        <!--header-->
+        <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+            <RelativeLayout android:layout_width="match_parent"
+                            android:background="@color/bg"
+                            android:layout_height="40dp">
+                <ImageView
+                        android:layout_marginTop="5dp"
+
+                        android:tint="@color/icon"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="30dp" app:srcCompat="@drawable/menu"/>
+                <ImageView android:layout_width="40dp"
+                           android:layout_marginRight="10dp"
+                           android:tint="@color/icon"
+                           android:layout_marginTop="5dp"
+                           android:layout_height="35dp"
+                           android:layout_alignParentRight="true" app:srcCompat="@drawable/profil"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+        <!--conten-->
+        <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/refreslayoutehome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+            android:fillViewport="true">
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    <!--post form-->
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp">
+                        <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                            <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                <EditText
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="20dp"
+                                        android:background="#ffff"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="100dp"/>
+                                <LinearLayout
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:orientation="horizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+                                    <ImageView
+                                            android:tint="@color/icon"
+                                            android:layout_marginRight="10dp"
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp" app:srcCompat="@drawable/insertclip"/>
+                                    <ImageView
+                                            android:tint="@color/icon"
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp" app:srcCompat="@drawable/location"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent">
+                                <ImageView
+                                        android:id="@+id/btpost"
+                                        android:layout_marginLeft="10dp"
+                                        android:tint="@color/icon"
+                                        android:layout_marginTop="50dp"
+                                        android:layout_marginRight="20dp"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp" app:srcCompat="@drawable/post"/>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <!--Timenli-->
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        <android.support.v7.widget.RecyclerView
+                                android:id="@+id/listpost"
+                                android:nestedScrollingEnabled="false"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+
+                        </android.support.v7.widget.RecyclerView>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    </RelativeLayout>
+
